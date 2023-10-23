@@ -1,0 +1,99 @@
+# can be swin or efficientNet
+NETWORK: efficient
+EMBEDDING_SIZE: 512
+IMAGE_RESOLUTION: 380
+EPOCHS: 50
+EXPERIMENT_NAME: 'efficient_5archs_config2'
+MODEL_PATH: '/media/ssd1/labady/repos/generative_attr/efficient_5archs_config2/embedding_models/efficient_5archs_config2.49-0.0154.h5'
+RESUME: False
+NB_CLASSES_PER_BATCH: 3
+NB_IMGS_PER_CLASS: 4
+LEARNING_RATE: 0.0001
+LSGM_dir: '/media/ssd1/labady/datasets/semafor/LSGM/'
+StyleGAN2_dir: '/media/ssd1/labady/datasets/semafor/styleGAN2/'
+StyleGAN3_dir: '/media/ssd1/labady/datasets/semafor/styleGAN3/'
+Transfer_dir: '/media/ssd1/labady/datasets/semafor/transformers/'
+LDiffusion_dir: '/media/ssd1/labady/datasets/semafor/LDiff/'
+GDiffusion_dir: '/media/ssd1/labady/datasets/semafor/guided_diffusion/'
+DDPM_dir: '/media/ssd1/labady/datasets/semafor/DDPM/'
+BEGAN_dir: '/media/ssd1/labady/datasets/semafor/BEGAN/'
+STARGAN_dir: '/media/ssd1/labady/datasets/semafor/StarGAN_v2/'
+BIGGAN_dir: '/media/ssd1/labady/datasets/semafor/UnetBigGAN/'
+PROGAN_dir: '/media/ssd1/labady/datasets/semafor/ProGAN/'
+LSGM_PARAMETERS:
+  SUBFOLDERS:
+    - 'celeba-hq-256-quantitative'
+    - 'celeba-hq-256-qualitative'
+  NBOFIMGS: 25000
+TRANS_PARAMETERS:
+  SUBFOLDERS:
+    - 'ffhq_k300_p1.0_fid9.6'
+  NBOFIMGS: 50000
+STYLEGAN3_PARAMETERS:
+  SUBFOLDERS:
+    - 'out_r_ffhqu256'
+    - 'out_r_ffhqu'
+    - 'out_r_ffhq'
+    - 'out-t-ffhq1024'
+    - 'out-t-ffhqu256'
+  NBOFIMGS: 10000
+STYLEGAN2_PARAMETERS:
+  SUBFOLDERS:
+    - 'ffhq-config-f'
+  NBOFIMGS: 50000
+LDIFF_PARAMETERS:
+  SUBFOLDERS:
+    - 'ffhq256'
+    - 'celeba256'
+  NBOFIMGS: 25000
+PROGAN_PARAMETERS:
+  SUBFOLDERS:
+    - 'ProGAN'
+    - 'celebaha'
+  NBOFIMGS: 25000
+STARGAN_PARAMETERS:
+  SUBFOLDERS:
+    - 'celeba_hq'
+  NBOFIMGS: 50000
+BIGGAN_PARAMETERS:
+  SUBFOLDERS:
+    - 'celeba'
+  NBOFIMGS: 50000
+BEGAN_PARAMETERS:
+  SUBFOLDERS:
+    - 'celeba_crop_128'
+  NBOFIMGS: 50000
+DDPM_PARAMETERS:
+  SUBFOLDERS:
+    - 'ddpm'
+    - 'ddpm_ema'
+  NBOFIMGS: 25000
+PATHS:
+  - '/media/ssd1/labady/datasets/semafor/styleGAN2/'
+  - '/media/ssd1/labady/datasets/semafor/UnetBigGAN/'
+  - '/media/ssd1/labady/datasets/semafor/ProGAN/'
+  - '/media/ssd1/labady/datasets/semafor/LDiff/'
+  - '/media/ssd1/labady/datasets/semafor/LSGM/'
+CLASSES:
+  - 'STYLEGAN2'
+  - 'BIGGAN'
+  - 'PROGAN'
+  - 'LDIFF'
+  - 'LSGM'
+##### ONLY USED WHEN TRAINING DENSE LAYERS AND TESTING EMBEDDINGS
+BATCH_SIZE: 8
+EMBEDDED_MODEL_NAME: 'efficient_5archs_config2.45-0.0000.h5'
+##### ONLY USED WHEN TESTING DENSE LAYERS AND TESTING EMBEDDINGS
+DENSE_MODEL_NAME: 'efficient_5archs_config2.07-0.00.h5'
+OPEN_PATHS:
+  - '/media/ssd1/labady/datasets/semafor/styleGAN3/'
+  - '/media/ssd1/labady/datasets/semafor/StarGAN_v2/'
+  - '/media/ssd1/labady/datasets/semafor/transformers/'
+  - '/media/ssd1/labady/datasets/semafor/BEGAN/'
+  - '/media/ssd1/labady/datasets/semafor/DDPM/'
+OPEN_CLASSES:
+  - 'STYLEGAN3'
+  - 'STARGAN'
+  - 'TRANS'
+  - 'BEGAN'
+  - 'DDPM'
