@@ -4,7 +4,7 @@ This repo holds code for [A Siamese-based Verification System for Open-set Archi
 ## Usage
 
 ### 1. Download trained models for configuration 1 and 3 
-* [Get models in this link](https://drive.google.com/drive/folders/1b8xk1KI1xIgLvtOiwCjSvrePrQoPWTG6?usp=sharing)
+* [Get models from this link](https://drive.google.com/drive/folders/1b8xk1KI1xIgLvtOiwCjSvrePrQoPWTG6?usp=sharing)
 
 
 ### 2. Environment
